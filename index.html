@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BUS 125 Companion — Week 2</title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div class="progressbar">
+  <div class="progress-inner">
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="progress-labels" id="progressLabels">
+      <span>Understand</span><span>Present</span><span>React</span><span>Organize</span>
+    </div>
+  </div>
+</div>
+
+<main>
+  <header class="hero reveal visible" data-stage="0">
+    <div class="kicker">BUS 125 · Week 2</div>
+    <h1>Make the spreadsheet <span class="accent">work for you.</span></h1>
+    <p class="lead">This week we move beyond entering values. We start asking Excel to summarize information, present it clearly, respond to rules, and organize the workbook for someone else to use.</p>
+    <div class="path"><span>Understand</span><span>Present</span><span>React</span><span>Organize</span></div>
+    <a class="continue" href="#count">Begin ↓</a>
+  </header>
+
+  <section class="beat reveal" id="count" data-stage="0">
+    <div class="kicker">Understand the data</div>
+    <h2>COUNT and COUNTA answer <span class="accent">different questions.</span></h2>
+    <div class="count-layout">
+      <div>
+        <div class="data-strip" id="countData">
+          <div class="data-cell number nonblank">125</div>
+          <div class="data-cell number nonblank">82</div>
+          <div class="data-cell nonblank">Apple</div>
+          <div class="data-cell blank">(blank)</div>
+          <div class="data-cell number nonblank">97</div>
+          <div class="data-cell nonblank">Pending</div>
+        </div>
+        <div class="action-row">
+          <button type="button" data-count="COUNT">COUNT</button>
+          <button type="button" data-count="COUNTA">COUNTA</button>
+        </div>
+      </div>
+      <aside class="card">
+        <div class="kicker">Question Excel answers</div>
+        <h3 id="countTitle">Choose COUNT or COUNTA</h3>
+        <div class="metric" id="countMetric">—</div>
+        <p id="countCopy" class="small">COUNT looks for numeric values. COUNTA looks for cells that contain something.</p>
+        <div class="formula" id="countFormula">Click a function →</div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="beat reveal" id="formatting" data-stage="1">
+    <div class="kicker">Present the data</div>
+    <h2>The value can stay the same while the <span class="accent">display changes.</span></h2>
+    <div class="format-layout">
+      <div class="value-box">
+        <div class="raw">Underlying value: 0.125</div>
+        <div class="display-value" id="formatValue">0.125</div>
+        <div class="action-row">
+          <button type="button" data-format="general" class="active">General</button>
+          <button type="button" data-format="percent">Percentage</button>
+          <button type="button" data-format="currency">Currency</button>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <h3>Formatting changes presentation.</h3>
+          <p class="small">Excel stores a value, then applies formatting to decide how that value should appear.</p>
+          <div class="rule"><strong>Key idea:</strong> formatting usually changes how the data looks—not the underlying value itself.</div>
+        </div>
+        <div class="gotchas">
+          <div class="gotcha">
+            <h3>Date gotcha</h3>
+            <span class="fake-cell bad">45567</span><span class="fake-cell good">9/28/2024</span>
+            <p class="small">If a date suddenly shows a plain number, the date format may have been removed.</p>
+          </div>
+          <div class="gotcha">
+            <h3>Percent/decimal gotcha</h3>
+            <span class="fake-cell bad">$0.00</span><span class="fake-cell good">0.4%</span>
+            <p class="small">A small decimal can look like zero if Accounting is applied instead of the intended format.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="beat reveal" id="styles" data-stage="1">
+    <div class="kicker">Formatting like the project</div>
+    <h2>Build the worksheet title <span class="accent">one step at a time.</span></h2>
+    <div class="grid2">
+      <div class="project-sheet">
+        <div class="sheet-grid" id="projectSheet">
+          <div class="grid-cell header">A</div><div class="grid-cell header">B</div><div class="grid-cell header">C</div><div class="grid-cell header">D</div><div class="grid-cell header">E</div>
+          <div class="grid-cell title-source" id="a1">Quarterly Sales Report</div>
+          <div class="grid-cell" id="b1"></div><div class="grid-cell" id="c1"></div><div class="grid-cell" id="d1"></div><div class="grid-cell" id="e1"></div>
+        </div>
+        <div class="action-row">
+          <button type="button" data-projectstep="merge">Merge &amp; Center A1:E1</button>
+          <button type="button" data-projectstep="font">Calibri Light</button>
+          <button type="button" data-projectstep="size">22 pt</button>
+          <button type="button" data-projectstep="color">Aqua, Accent 1</button>
+          <button type="button" data-projectstep="bold">Bold</button>
+          <button type="button" data-projectstep="reset">Reset</button>
+        </div>
+      </div>
+      <aside class="card">
+        <div class="kicker">Project sequence</div>
+        <div class="project-steps" id="projectSteps">
+          <div class="project-step" data-stepmark="merge"><span class="step-num">1</span><span>Merge &amp; center A1:E1</span></div>
+          <div class="project-step" data-stepmark="font"><span class="step-num">2</span><span>Calibri Light</span></div>
+          <div class="project-step" data-stepmark="size"><span class="step-num">3</span><span>22 point</span></div>
+          <div class="project-step" data-stepmark="color"><span class="step-num">4</span><span>Aqua, Accent 1</span></div>
+          <div class="project-step" data-stepmark="bold"><span class="step-num">5</span><span>Bold</span></div>
+        </div>
+        <div class="destructive" id="mergeNote"><strong>Merge changes structure.</strong><br>Only the value in the upper-left cell survives when you merge a range.</div>
+      </aside>
+    </div>
+
+    <div class="grid2" style="margin-top:22px">
+      <div class="card">
+        <h3>Why merge can be destructive</h3>
+        <p class="small">If B1:E1 already contain data, that information is lost when the cells are merged because the surviving value comes from A1.</p>
+        <div><span class="lost">East</span><span class="lost">West</span><span class="lost">North</span><span class="lost">South</span></div>
+      </div>
+      <div class="card">
+        <h3>Later: apply a cell style</h3>
+        <div class="style-preview" id="accent6Preview">Quarterly Sales Report</div>
+        <div class="action-row"><button type="button" id="accent6Toggle">Apply Accent 6</button></div>
+        <p class="small">Manual formatting changes individual properties. A cell style applies a coordinated package of formatting choices at once.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="beat reveal" id="conditional-logic" data-stage="2">
+    <div class="kicker">Define the concept first</div>
+    <h2>Conditional logic means Excel can <span class="accent">look, test, and respond.</span></h2>
+    <div class="logic-intro">
+      <div class="logic-pill-row">
+        <div class="logic-pill">
+          <div class="num">1</div>
+          <h3>Look</h3>
+          <p>Excel looks at a value, text entry, formula result, or cell status.</p>
+        </div>
+        <div class="logic-pill">
+          <div class="num">2</div>
+          <h3>Test</h3>
+          <p>Excel checks a rule or condition such as “Is this below 1000?”</p>
+        </div>
+        <div class="logic-pill">
+          <div class="num">3</div>
+          <h3>Respond</h3>
+          <p>Excel does something based on the result: format it, return a label, count it, or include it in a total.</p>
+        </div>
+      </div>
+      <div class="rule"><strong>Definition:</strong> Conditional logic means Excel checks a condition and then does something based on whether that condition is true or false.</div>
+      <div class="logic-mini">
+        <span class="look">Look at value: $850</span>
+        <span class="test">Test: Is it below $1,000?</span>
+        <span class="respond">Respond: Highlight it</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="beat reveal" id="conditional" data-stage="2">
+    <div class="kicker">Let Excel react</div>
+    <h2>Conditional formatting changes appearance <span class="accent">based on a rule.</span></h2>
+    <div class="logic-flow">
+      <div class="logic-box"><strong>Look at a value</strong><span>Sales = $850</span></div>
+      <div class="arrow">→</div>
+      <div class="logic-box condition"><strong>Test a condition</strong><span>Sales &lt; $1,000?</span></div>
+      <div class="arrow">→</div>
+      <div class="logic-box result"><strong>Take an action</strong><span>Highlight the cell</span></div>
+    </div>
+    <div class="action-row">
+      <button type="button" data-rule="none" class="active">No rule</button>
+      <button type="button" data-rule="below">Below $1,000</button>
+      <button type="button" data-rule="goal">At least $1,000</button>
+    </div>
+    <div class="sample-sales">
+      <span class="sale" data-sale="850">$850</span><span class="sale" data-sale="1250">$1,250</span><span class="sale" data-sale="990">$990</span><span class="sale" data-sale="1600">$1,600</span><span class="sale" data-sale="720">$720</span>
+    </div>
+    <div class="rule" style="margin-top:18px"><strong>Regular formatting:</strong> you decide how it looks. <strong>Conditional formatting:</strong> you give Excel a rule for deciding how it looks.</div>
+  </section>
+
+  <section class="beat reveal" id="logic-future" data-stage="2">
+    <div class="kicker">This idea keeps coming back</div>
+    <h2>Conditional logic becomes a <span class="accent">through-line.</span></h2>
+    <div class="future-grid">
+      <div class="future"><strong>Conditional Formatting</strong><p>Condition → change appearance</p></div>
+      <div class="future"><strong>IF</strong><p>Condition → return a result</p></div>
+      <div class="future"><strong>COUNTIF</strong><p>Condition → decide what gets counted</p></div>
+      <div class="future"><strong>SUMIF / AVERAGEIF</strong><p>Condition → decide which values participate</p></div>
+    </div>
+    <div class="rule" style="margin-top:20px"><strong>Big idea:</strong> Excel becomes more powerful when we give it rules instead of manually making every decision ourselves.</div>
+  </section>
+
+  <section class="beat reveal" id="resize" data-stage="3">
+    <div class="kicker">Organize the worksheet</div>
+    <h2>The boundary changes what the cursor <span class="accent">does.</span></h2>
+    <div class="resize-layout">
+      <div class="header-demo">
+        <div class="colheads">
+          <div class="col a">A</div><div class="boundary"></div>
+          <div class="col b" id="resizeCol">B</div><div class="boundary"></div>
+          <div class="col c">C</div><div class="boundary"></div>
+          <div class="col d">D</div>
+        </div>
+        <div class="datarow">
+          <div class="cell a"></div>
+          <div class="cell b" id="resizeCell"><span class="content-chip">Quarterly Sales</span></div>
+          <div class="cell c"></div>
+          <div class="cell d"></div>
+        </div>
+        <div class="action-row">
+          <button type="button" data-resize="drag">Drag wider</button>
+          <button type="button" data-resize="fit">AutoFit / Best Fit</button>
+          <button type="button" data-resize="exact">Exact width</button>
+        </div>
+      </div>
+      <aside class="card">
+        <h3 id="resizeTitle">Point at the boundary</h3>
+        <p id="resizeCopy" class="small">When the pointer reaches the boundary between column headings, Excel changes the cursor to indicate that dragging will resize the column.</p>
+        <div class="rule" id="resizeNote">Drag = approximate · AutoFit = contents decide · Column Width = you specify</div>
+        <p class="small" style="margin-top:14px">The same idea applies to row height.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="beat reveal" id="tabs" data-stage="3">
+    <div class="kicker">Organize the workbook</div>
+    <h2>Worksheet tabs should tell us <span class="accent">what is on the sheet.</span></h2>
+    <div class="tabs-demo">
+      <div class="tabs" id="sheetTabs">
+        <button type="button" class="sheet-tab active">Sheet1</button>
+        <button type="button" class="sheet-tab">Sheet2</button>
+        <button type="button" class="sheet-tab">Sheet3</button>
+      </div>
+      <div class="action-row">
+        <button type="button" data-tabaction="rename">Rename tabs</button>
+        <button type="button" data-tabaction="color">Add tab colors</button>
+        <button type="button" data-tabaction="reset">Reset</button>
+      </div>
+      <p id="tabStatus" class="small">Generic names make a workbook harder to navigate. Rename sheets so another person can understand the structure quickly.</p>
+    </div>
+  </section>
+
+  <section class="beat reveal" id="select-act" data-stage="3">
+    <div class="kicker">A rule worth remembering</div>
+    <h1><span class="accent">Select</span> what you want to affect.<br>Then choose the action.</h1>
+    <div class="grid2">
+      <div class="card"><strong>Select cells</strong><p>Then format, calculate, or apply conditional formatting.</p></div>
+      <div class="card"><strong>Select a column or row</strong><p>Then resize, format, insert, or delete.</p></div>
+      <div class="card"><strong>Select a worksheet</strong><p>Then rename, color, move, or organize it.</p></div>
+      <div class="card"><strong>Select data</strong><p>Then build a chart or other visual.</p></div>
+    </div>
+    <div class="formula" style="margin-top:22px">SELECT → ACT</div>
+  </section>
+
+  <section class="beat reveal" id="live" data-stage="3">
+    <div class="kicker">Switch to Excel</div>
+    <h1>Now use these ideas in the <span class="accent">actual project.</span></h1>
+    <p class="lead">COUNT and COUNTA. Number and date formats. Fonts and styles. Conditional formatting. Column width, row height, AutoFit, and worksheet tabs—all in context.</p>
+    <div class="path"><span>Summarize</span><span>Format</span><span>React</span><span>Organize</span></div>
+  </section>
+
+  <section class="beat reveal" id="check" data-stage="3">
+    <div class="kicker">Quick check</div>
+    <h2>Before we finish…</h2>
+    <div class="checks" id="checks">
+      <div class="check"><strong>COUNT or COUNTA?</strong><p>Count every nonblank cell, including text.</p><button type="button">Reveal</button><div class="answer">COUNTA</div></div>
+      <div class="check"><strong>Formatting</strong><p>Does displaying 0.15 as 15% change the stored value?</p><button type="button">Reveal</button><div class="answer">No. The display changes; the underlying value stays the same.</div></div>
+      <div class="check"><strong>Conditional Formatting</strong><p>What makes it conditional?</p><button type="button">Reveal</button><div class="answer">Excel applies the format based on a rule or condition.</div></div>
+      <div class="check"><strong>Column width</strong><p>What does double-clicking the boundary do?</p><button type="button">Reveal</button><div class="answer">AutoFit / Best Fit adjusts the width to the contents.</div></div>
+    </div>
+  </section>
+</main>
+
+<script src="js/app.js" defer></script>
+</body>
+</html>
